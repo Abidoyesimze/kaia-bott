@@ -1,0 +1,22 @@
+{
+  "name": "kaia-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0",
+    "crypto-js": "^4.2.0",
+    "ethers": "^6.13.4",
+    "node-telegram-bot-api": "^0.66.0",
+    "web3": "^4.15.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
