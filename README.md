@@ -131,10 +131,7 @@ nft-telegram-bot/
 ### Running the Bot
 ```bash
 # Development
-npm run dev
-
-# Production
-npm start
+node bot.js
 ```
 
 ### Error Handling
