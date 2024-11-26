@@ -1,12 +1,16 @@
 // nft-bot.js
 require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
+const express = require('express');
 const { ethers } = require('ethers');
 const { BotContract } = require('./index');
 const CryptoJS = require('crypto-js');
 
 class NFTBot {
     constructor() {
+        // Initialize Express server
+        this.app = express();
+        this.port = process.env.PORT || 3000; // Default port is 3000 if not specified in the environment
         // Initialize Telegram Bot
         this.bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: true });
         
@@ -28,6 +32,8 @@ class NFTBot {
         this.setupCommands();
         this.setupGroupManagement();
     }
+
+    
 
     async validateNFTOwnership(userId) {
         const userSession = this.userSessions.get(userId);
